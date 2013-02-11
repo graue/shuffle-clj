@@ -9,8 +9,8 @@
             (shuffle (str/split-lines text))))
 
 (defn -main
-  "Copies input to output, randomly shuffling the lines."
+  "Prints a file with its lines randomly shuffled."
   ([filename]
    (println (shuffle-lines (slurp filename))))
-  ([]
+  ([]  ; If no file specified, use a default
    (-main "fruits.txt")))
